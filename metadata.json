@@ -1,0 +1,6 @@
+{
+  "name": "ReflectIQ - AI Journal & Cognitive Mirror",
+  "description": "User-authenticated multi-turn reflective journaling and brainstorming web application powered by Gemini 3.6 Flash and user-isolated Cloud Firestore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
