@@ -503,7 +503,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                placeholder={`Share your thoughts with ReflectIQ (${mode})...`}
+                placeholder={`Share your thoughts with ReflexIQ (${mode})...`}
                 disabled={isLoading}
                 className="flex-1 bg-[#FDFCF8] border-2 border-[#EAE7DC] focus:border-[#5A634D] rounded-xl px-4 py-3.5 text-xs sm:text-sm text-[#2C2C2C] placeholder-[#8E8E8E] focus:outline-none transition-all"
               />

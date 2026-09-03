@@ -66,7 +66,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             </h1>
 
             <p className="text-base sm:text-lg text-[#66635B] max-w-2xl leading-relaxed">
-              ReflectIQ combines the conversational intelligence of <span className="text-[#2C2C2C] font-semibold">Gemini 3.6 Flash</span> with <span className="text-[#2C2C2C] font-semibold">Firestore Owner-Bound Partitioning</span> to offer a secure, multi-turn sounding board that never leaks your personal reflections.
+              ReflexIQ combines the conversational intelligence of <span className="text-[#2C2C2C] font-semibold">Gemini 3.6 Flash</span> with <span className="text-[#2C2C2C] font-semibold">Firestore Owner-Bound Partitioning</span> to offer a secure, multi-turn sounding board that never leaks your personal reflections.
             </p>
 
             {/* Authentication Gateway Card */}
@@ -245,7 +245,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       {/* Footer */}
       <footer className="border-t border-[#EAE7DC] bg-[#F9F7F2] py-6 text-center text-xs text-[#8E8E8E]">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
-          <p>© 2026 ReflectIQ. Built with Google Gemini 3.6 Flash & Cloud Firestore.</p>
+          <p>© 2026 ReflexIQ. Built with Google Gemini 3.6 Flash & Cloud Firestore.</p>
           <p className="font-mono text-[#8E8E8E]">Strict Multi-Tenant Isolation • OWASP LLM Compliant</p>
         </div>
       </footer>

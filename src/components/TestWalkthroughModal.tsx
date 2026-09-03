@@ -25,7 +25,7 @@ const TEST_CASES: FunctionalTestCase[] = [
       "3. Inspect the navigation header for active user avatar, email, and target partition badge."
     ],
     expectedResult: "User identity is established without ever prompting for or storing plaintext passwords. Target partition reflects /users/{userId}/interactions.",
-    verificationMethod: "Inspect localStorage('reflectiq_active_auth_user') and Navbar header identity."
+    verificationMethod: "Inspect localStorage('reflexiq_active_auth_user') and Navbar header identity."
   },
   {
     id: "TC-02",
@@ -78,7 +78,7 @@ const TEST_CASES: FunctionalTestCase[] = [
       "3. Verify that all payload objects are cleansed of undefined attributes via stripUndefined."
     ],
     expectedResult: "Document is securely committed to the user's isolated partition without Firestore serialization crashes.",
-    verificationMethod: "Inspect localStorage('reflectiq_user_partition_{userId}_entries') or live Firestore collection."
+    verificationMethod: "Inspect localStorage('reflexiq_user_partition_{userId}_entries') or live Firestore collection."
   },
   {
     id: "TC-06",

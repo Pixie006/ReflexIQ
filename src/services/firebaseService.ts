@@ -87,8 +87,9 @@ export const PRESET_USERS: UserProfile[] = [
 ];
 
 // Active Session Store in client state / local isolated storage
-const LOCAL_SESSION_KEY = "reflectiq_active_auth_user";
-const SEED_FLAG_KEY = "reflectiq_seeded_v1";
+const LOCAL_SESSION_KEY = "reflexiq_active_auth_user";
+const LEGACY_SESSION_KEY = "reflectiq_active_auth_user";
+const SEED_FLAG_KEY = "reflexiq_seeded_v1";
 
 export class StorageService {
   /**
@@ -96,7 +97,7 @@ export class StorageService {
    */
   static getActiveUser(): UserProfile | null {
     try {
-      const stored = localStorage.getItem(LOCAL_SESSION_KEY);
+      const stored = localStorage.getItem(LOCAL_SESSION_KEY) || localStorage.getItem(LEGACY_SESSION_KEY);
       if (stored) {
         return JSON.parse(stored);
       }
@@ -175,6 +176,10 @@ export class StorageService {
    * Key for user-isolated collection storage
    */
   private static getUserStorageKey(userId: string): string {
+    return `reflexiq_user_partition_${userId}_entries`;
+  }
+
+  private static getLegacyUserStorageKey(userId: string): string {
     return `reflectiq_user_partition_${userId}_entries`;
   }
 
@@ -250,7 +255,7 @@ export class StorageService {
    */
   private static getLocalUserEntries(userId: string): JournalEntry[] {
     try {
-      const data = localStorage.getItem(this.getUserStorageKey(userId));
+      const data = localStorage.getItem(this.getUserStorageKey(userId)) || localStorage.getItem(this.getLegacyUserStorageKey(userId));
       if (data) {
         return JSON.parse(data);
       }

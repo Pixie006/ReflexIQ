@@ -110,7 +110,7 @@ export default function App() {
             <span>Partition Isolation: <code className="text-[#5A634D] font-mono text-[11px] font-semibold">/users/{user.uid}/interactions</code></span>
           </div>
           <p className="font-mono text-[#8E8E8E] text-[11px]">
-            ReflectIQ • Model: <span className="text-[#5A634D] font-semibold">gemini-3.6-flash</span> (Ladder Active) • Cloud Firestore
+            ReflexIQ • Model: <span className="text-[#5A634D] font-semibold">gemini-3.6-flash</span> (Ladder Active) • Cloud Firestore
           </p>
         </div>
       </footer>

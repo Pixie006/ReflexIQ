@@ -1,5 +1,5 @@
 /**
- * Data contracts and shared interfaces for ReflectIQ.
+ * Data contracts and shared interfaces for ReflexIQ.
  */
 
 export interface UserProfile {

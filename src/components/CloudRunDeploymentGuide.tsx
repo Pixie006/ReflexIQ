@@ -41,15 +41,15 @@ gcloud secrets add-iam-policy-binding GEMINI_API_KEY \\
   const SNIPPET_RULES = `# Deploy security rules to Cloud Firestore
 firebase deploy --only firestore:rules`;
 
-  const SNIPPET_DEPLOY = `# Deploy ReflectIQ container service to Cloud Run with Secret Manager binding
-gcloud run deploy reflectiq \\
+  const SNIPPET_DEPLOY = `# Deploy ReflexIQ container service to Cloud Run with Secret Manager binding
+gcloud run deploy reflexiq \\
   --source . \\
   --region us-central1 \\
   --allow-unauthenticated \\
   --set-secrets="GEMINI_API_KEY=GEMINI_API_KEY:latest"`;
 
   const SNIPPET_VERIFICATION = `# Apply mandatory campaign verification label
-gcloud run services update reflectiq \\
+gcloud run services update reflexiq \\
   --update-labels=dev-tutorial=cloud-run-ai-challenge \\
   --region=us-central1`;
 

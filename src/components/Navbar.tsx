@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center space-x-2">
               <span className="font-serif italic font-semibold text-xl tracking-tight text-[#5A634D]">
-                ReflectIQ
+                ReflexIQ
               </span>
               <span className="px-2 py-0.5 text-[10px] font-semibold bg-[#5A634D]/10 text-[#5A634D] border border-[#5A634D]/25 rounded-full tracking-wider uppercase">
                 Gemini 3.6 Flash

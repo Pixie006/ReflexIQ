@@ -1,6 +1,6 @@
-# ReflectIQ - AI Journal & User-Isolated Cloud Firestore Architecture
+# ReflexIQ - AI Journal & User-Isolated Cloud Firestore Architecture
 
-ReflectIQ is an AI-powered multi-turn reflective journaling and strategic brainstorming application built with **Google Gemini 3.6 Flash** and **Cloud Firestore**. It enforces strict, owner-bound data isolation so that users cannot query or read each other's reflection transcripts.
+ReflexIQ is an AI-powered multi-turn reflective journaling and strategic brainstorming application built with **Google Gemini 3.6 Flash** and **Cloud Firestore**. It enforces strict, owner-bound data isolation so that users cannot query or read each other's reflection transcripts.
 
 ---
 
@@ -36,7 +36,7 @@ gcloud services enable \
 
 ## 3. Secret Management Setup (GCP Secret Manager)
 
-ReflectIQ adheres to zero-hardcoding standards. Store your Gemini API Key in Secret Manager and grant the Cloud Run compute service account accessor privileges:
+ReflexIQ adheres to zero-hardcoding standards. Store your Gemini API Key in Secret Manager and grant the Cloud Run compute service account accessor privileges:
 
 ```bash
 # Create and populate the secret
@@ -83,7 +83,7 @@ firebase deploy --only firestore:rules
 Deploy the containerized service directly from source with Secret Manager environment mounts:
 
 ```bash
-gcloud run deploy reflectiq \
+gcloud run deploy reflexiq \
   --source . \
   --region us-central1 \
   --allow-unauthenticated \
@@ -97,7 +97,7 @@ gcloud run deploy reflectiq \
 Apply the mandatory challenge label to register the deployed Cloud Run service for automated verification:
 
 ```bash
-gcloud run services update reflectiq \
+gcloud run services update reflexiq \
   --update-labels=dev-tutorial=cloud-run-ai-challenge \
   --region=us-central1
 ```
